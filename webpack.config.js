@@ -16,17 +16,13 @@ module.exports = {
       loader: 'babel',
     },
     {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader!postcss-loader',
-    },
-    {
       test: /\.scss/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader'),
     },
       // You could also use other loaders the same way. I. e. the autoprefixer-loader
     ],
-    postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
   },
+  postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
   plugins: [
     new ExtractTextPlugin('bundle.css'),
   ],
