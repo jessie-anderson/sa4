@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './style.scss';
+import './style.css';
 
 function updateTime() {
   const start = 'You\'ve been on this page for ';
