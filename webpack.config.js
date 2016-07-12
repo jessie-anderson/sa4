@@ -16,10 +16,10 @@ module.exports = {
       loader: 'babel',
     },
     {
+      // using autoprefixer loader instead of sass
       test: /\.scss/,
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader'),
     },
-      // You could also use other loaders the same way. I. e. the autoprefixer-loader
     ],
   },
   postcss: [autoprefixer({ browsers: ['last 2 versions'] })],

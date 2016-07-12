@@ -1,16 +1,16 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import './style.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SearchBar from './components/search_bar';
 
-function updateTime() {
-  const start = 'You\'ve been on this page for ';
-  const end = ' seconds.';
-  let curTime = 0;
-  function updateMsg() {
-    const message = start.concat(curTime.toString(), end);
-    $('#main').html(message);
-    curTime ++;
-  }
-  setInterval(updateMsg, 1000);
-}
 
-updateTime();
+const App = () => {
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('main'));
