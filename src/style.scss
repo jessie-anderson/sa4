@@ -2,24 +2,3 @@ body {
   font-family: "Roboto", sans-serif;
   background: darken(white, 0.2);
 }
-
-#main {
-  background-color: purple;
-  text-align: center;
-  color: white;
-}
-
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: 200px;
-  height: 100px;
-  background-color: purple;
-  padding: 10px;
-}
-
-.flex-item {
-  margin: auto;
-}
