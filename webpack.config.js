@@ -1,5 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+
 module.exports = {
   stats: { colors: true },
   devtool: 'inline-source-map',
@@ -18,11 +18,10 @@ module.exports = {
     {
       // using autoprefixer loader instead of sass
       test: /\.scss/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader'),
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
     },
     ],
   },
-  postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
   plugins: [
     new ExtractTextPlugin('bundle.css'),
   ],
